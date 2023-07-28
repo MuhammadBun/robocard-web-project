@@ -24,6 +24,7 @@ class NavBarMobileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MobileNavBar(
       currentPage: currentPage,
+      onDrawer: onDrawer,
     );
   }
 }

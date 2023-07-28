@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:robocard_portfolio/Widgets/Home%20mobile/about_us.dart';
+import 'package:robocard_portfolio/Widgets/Home%20mobile/drawer_mob.dart';
 
 import 'package:robocard_portfolio/Widgets/Home%20mobile/nav.dart';
 import 'package:robocard_portfolio/Widgets/Home%20mobile/proto.dart';
@@ -18,7 +19,7 @@ class HomeScreenMobile extends StatefulWidget {
 class _HomeScreenMobileState extends State<HomeScreenMobile> {
   final PageController _pageController = PageController();
   final List<Widget> _pages = [
-    PortfolioMobile(),
+    HomePageMobile(),
     AboutUsPageMobile(),
     PortfolioMobile(),
     PortfolioMobile(),
@@ -40,6 +41,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
     'https://etimg.etb2bimg.com/photo/100540811.cms',
   ];
   int _currentImageIndex = 0;
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   void _navigateTo(int page) {
     _pageController.animateToPage(
@@ -57,6 +59,29 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: OnDrawerMobile(
+        onHome: () {
+          _navigateTo(0);
+          Navigator.pop(context);
+        },
+        onAbout: () {
+          _navigateTo(1);
+          Navigator.pop(context);
+        },
+        onServices: () {
+          _navigateTo(2);
+          Navigator.pop(context);
+        },
+        onContactUs: () {
+          _navigateTo(3);
+          Navigator.pop(context);
+        },
+        onPortfolio: () {
+          _navigateTo(4);
+          Navigator.pop(context);
+        },
+      ),
       backgroundColor: Color.fromARGB(255, 24, 24, 24),
       body: Stack(
         children: [
@@ -87,7 +112,10 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
                 onPortfolio: () => _navigateTo(3),
                 onContactUs: () => _navigateTo(4),
                 currentPage: _currentPage,
-                onDrawer: () {},
+                onDrawer: () {
+                  scaffoldKey.currentState?.openDrawer();
+                  print("object");
+                },
               ),
               Expanded(
                 child: PageView(
@@ -102,4 +130,3 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
     );
   }
 }
- 
