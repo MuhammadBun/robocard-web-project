@@ -14,16 +14,14 @@ class OnDrawerMobile extends StatelessWidget {
   final VoidCallback? onServices;
   final VoidCallback? onContactUs;
   Widget cardChoise(String text, VoidCallback? onTap) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-        margin: EdgeInsets.all(10),
-        width: 240,
-        decoration: BoxDecoration(
-            color: Color.fromARGB(255, 28, 28, 28),
-            borderRadius: BorderRadius.circular(10)),
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 5),
+      child: MaterialButton(
+        color: Color.fromARGB(255, 28, 28, 28),
+        minWidth: 100,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+        padding: EdgeInsets.symmetric(horizontal: 100,vertical: 20),
+        onPressed: onTap,
         child: Text(
           text,
           style: TextStyle(color: Colors.white, fontSize: 16),

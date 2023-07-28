@@ -6,7 +6,7 @@ class ContactUsPageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10, bottom: 100, right: 500, left: 500),
+      margin: EdgeInsets.only(top: 10, bottom: 100, right: 50, left: 50),
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 11, 11, 11),
           borderRadius: BorderRadius.circular(15)),

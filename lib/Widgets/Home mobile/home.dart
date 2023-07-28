@@ -46,7 +46,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
   void _navigateTo(int page) {
     _pageController.animateToPage(
       page,
-      duration: const Duration(milliseconds: 1200),
+      duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
     );
     setState(() {
@@ -73,11 +73,11 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
           _navigateTo(2);
           Navigator.pop(context);
         },
-        onContactUs: () {
+        onPortfolio: () {
           _navigateTo(3);
           Navigator.pop(context);
         },
-        onPortfolio: () {
+        onContactUs: () {
           _navigateTo(4);
           Navigator.pop(context);
         },
@@ -106,11 +106,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               NavBarMobileWidget(
-                onHome: () => _navigateTo(0),
-                onAbout: () => _navigateTo(1),
-                onServices: () => _navigateTo(2),
-                onPortfolio: () => _navigateTo(3),
-                onContactUs: () => _navigateTo(4),
+   
                 currentPage: _currentPage,
                 onDrawer: () {
                   scaffoldKey.currentState?.openDrawer();

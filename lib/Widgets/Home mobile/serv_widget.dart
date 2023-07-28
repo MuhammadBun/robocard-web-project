@@ -39,9 +39,9 @@ class _ServWidgetMobileState extends State<ServWidgetMobile> {
             Container(
               width: width, // Set the width property here
               height: height,
-              // Set the height property here
+              // Set the height property herse
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.6),
+                color: Colors.transparent,
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
