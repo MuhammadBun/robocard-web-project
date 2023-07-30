@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class OnDrawerMobile extends StatelessWidget {
   const OnDrawerMobile(
@@ -20,7 +21,7 @@ class OnDrawerMobile extends StatelessWidget {
         color: Color.fromARGB(255, 28, 28, 28),
         minWidth: 100,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-        padding: EdgeInsets.symmetric(horizontal: 100,vertical: 20),
+        padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
         onPressed: onTap,
         child: Text(
           text,
@@ -41,15 +42,14 @@ class OnDrawerMobile extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            Text(
-              'RoboCard',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-              ),
+            SvgPicture.asset(
+              "assets/images/logo_robo.svg",
+              width: 150,
+              color: Colors.white,
             ),
+           
             SizedBox(
-              height: 50,
+              height: 20,
             ),
             cardChoise("Home", onHome),
             cardChoise("About", onAbout),

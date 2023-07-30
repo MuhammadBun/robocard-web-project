@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:robocard_portfolio/Widgets/Home%20mobile/home.dart';
 import 'package:robocard_portfolio/Widgets/Home%20mobile/home_page.dart';
+import 'package:robocard_portfolio/Widgets/test.dart';
 
 import 'Widgets/Home Web/home.dart';
 import 'Widgets/Home Web/nav.dart';
@@ -38,15 +39,7 @@ class MyApp extends StatelessWidget {
           textTheme: Theme.of(context).textTheme.apply(
                 fontFamily: 'Open Sans',
               )),
-      home: LayoutBuilder(
-        builder: (context, constraints) {
-          if (constraints.maxWidth > 800) {
-            return HomeScreen();
-          } else {
-            return HomeScreenMobile();
-          }
-        },
-      ),
+      home: SplashScreen(),
     );
   }
 }

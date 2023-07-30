@@ -21,7 +21,7 @@ class AboutUsPageMobile extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20),
+                    fontSize: 26),
               ),
             ),
           ],
@@ -32,7 +32,7 @@ class AboutUsPageMobile extends StatelessWidget {
           child: Text(
             'Our team is made up of passionate and dedicated professionals with a wealth of experience in robotics, artificial intelligence, and user experience design. We are committed to pushing the boundaries of what is possible and delivering innovative solutions that meet the needs of our customers.',
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w200, fontSize: 18),
+                color: Colors.white, fontWeight: FontWeight.w200, fontSize: 24),
             textAlign: TextAlign.justify,
           ),
         ),

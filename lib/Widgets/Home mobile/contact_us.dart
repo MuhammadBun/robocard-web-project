@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ContactUsPageMobile extends StatelessWidget {
   const ContactUsPageMobile({super.key});
@@ -95,6 +96,11 @@ class ContactUsPageMobile extends StatelessWidget {
                     style: TextStyle(color: Colors.white, fontSize: 20))
               ],
             ),
+          ),
+          SvgPicture.asset(
+            "assets/images/logo_robo.svg",
+            width: 100,
+            color: Colors.white,
           ),
         ],
       ),

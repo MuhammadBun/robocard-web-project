@@ -21,7 +21,7 @@ class HomePageMobile extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20),
+                    fontSize: 26),
               ),
             ),
           ],
@@ -32,7 +32,7 @@ class HomePageMobile extends StatelessWidget {
           child: Text(
             'Our AI-powered robot guides are designed to revolutionize the way people navigate buildings. With real-time information about rooms and building features, our robot guides make it easier for users to find their way in hospitals, universities, and more. Experience the future of building navigation with our innovative technology',
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w200, fontSize: 18),
+                color: Colors.white, fontWeight: FontWeight.w200, fontSize: 24),
             textAlign: TextAlign.justify,maxLines: 4,
           ),
         ),

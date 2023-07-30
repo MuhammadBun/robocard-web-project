@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:robocard_portfolio/Widgets/nav_buttons.dart';
 
 class NavBarWidget extends StatelessWidget {
@@ -63,8 +64,6 @@ class WebNaveBar extends StatefulWidget {
 }
 
 class _WebNaveBarState extends State<WebNaveBar> {
- 
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -76,49 +75,36 @@ class _WebNaveBarState extends State<WebNaveBar> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-            child: Text(
-              'RoboCard',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+            padding: EdgeInsets.symmetric(  horizontal: 20),
+            child: SvgPicture.asset(
+              "assets/images/logo_robo.svg",
+              width: 80,
+              color: Colors.white,
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               NavButton(
-                onPressed:
-                    widget.onHome, text:
-                    "Home", isSelected:
-                    widget.currentPage ==
-                        'Home'),
+                  onPressed: widget.onHome,
+                  text: "Home",
+                  isSelected: widget.currentPage == 'Home'),
               NavButton(
-                onPressed:
-                    widget.onAbout, text:
-                    "About Us", isSelected:
-                    widget.currentPage ==
-                        'About Us'),
+                  onPressed: widget.onAbout,
+                  text: "About Us",
+                  isSelected: widget.currentPage == 'About Us'),
               NavButton(
-                onPressed:
-                    widget.onServices, text:
-                    "Services", isSelected:
-                    widget.currentPage ==
-                        'Services'),
+                  onPressed: widget.onServices,
+                  text: "Services",
+                  isSelected: widget.currentPage == 'Services'),
               NavButton(
-                onPressed:
-                    widget.onPortfolio, text:
-                    "Portfolio", isSelected:
-                    widget.currentPage ==
-                        'Portfolio'),
+                  onPressed: widget.onPortfolio,
+                  text: "Portfolio",
+                  isSelected: widget.currentPage == 'Portfolio'),
               NavButton(
-                onPressed:
-                    widget.onContactUs, text:
-                    "Contact Us", isSelected:
-                    widget.currentPage ==
-                        'Contact Us'),
+                  onPressed: widget.onContactUs,
+                  text: "Contact Us",
+                  isSelected: widget.currentPage == 'Contact Us'),
             ],
           )
         ],

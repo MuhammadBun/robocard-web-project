@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ContactUsPage extends StatelessWidget {
   const ContactUsPage({super.key});
@@ -6,7 +7,7 @@ class ContactUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10, bottom: 100, right: 500, left: 500),
+      margin: EdgeInsets.only(top: 10, bottom: 100, right: 400, left: 400),
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 11, 11, 11),
           borderRadius: BorderRadius.circular(15)),
@@ -95,6 +96,11 @@ class ContactUsPage extends StatelessWidget {
                     style: TextStyle(color: Colors.white, fontSize: 20))
               ],
             ),
+          ),
+          SvgPicture.asset(
+            "assets/images/logo_robo.svg",
+            width: 80,
+            color: Colors.white,
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class NavBarMobileWidget extends StatelessWidget {
   final VoidCallback? onHome;
@@ -41,21 +42,18 @@ class MobileNavBar extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(30),
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 11, 11, 11),
+          color: Colors.transparent,
           borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-            child: Text(
-              'RoboCard',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            padding: EdgeInsets.symmetric(  horizontal: 20),
+            child: SvgPicture.asset(
+              "assets/images/logo_robo.svg",
+              width: 80,
+              color: Colors.white,
+            ), 
           ),
           IconButton(
               onPressed: onDrawer,
