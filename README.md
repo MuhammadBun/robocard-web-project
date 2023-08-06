@@ -1,4 +1,3 @@
-![image](https://github.com/MuhammadBun/robocard-web-project/assets/93766485/32437f68-59d4-4792-977c-181a34fec7cb) 
 # robocard_portfolio
 - website for a robocard company
 # From Web : 
